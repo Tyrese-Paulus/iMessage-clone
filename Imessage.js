@@ -7,7 +7,7 @@ function Imessage() {
   return (
     <div className='imessage'>
       <Sidebar />
-      <Chat />
+      <Chat /> 
     </div>
   );
 }

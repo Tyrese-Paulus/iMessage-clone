@@ -5,9 +5,13 @@ import { auth, provider } from './firebase';
 
 function Login() {
 
-  const = signIn = () => {
-    auth.signInWithPopup(provider).catch(error => alert(error.message)
-  }
+  const signIn = () => {
+    alert(
+      'This app uses Firebase authentication so feel free to use your gmail account However; if you do not trust using your account details use: Email - demosubject369@gmail.com , Password - demo12345'
+    );
+    auth.signInWithPopup(provider)
+    .catch((error) => alert(error.message));
+  };
 
   return (
     <div className='login'>
@@ -18,7 +22,7 @@ function Login() {
         />
         <h1>imessage</h1>
       </div>
-      <Button onCLick={signIn}>Sign In</Button>
+      <Button onClick={signIn}>Sign In</Button>
     </div>
   );
 }
